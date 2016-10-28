@@ -1,0 +1,68 @@
+<div class="container" ng-controller="profileCtrl">
+
+    <div style="Padding:20px;">
+        Date:
+        <input type="text" uib-datepicker-popup="{{dateformat}}" ng-model="dt" is-open="showdp" ng-change="newDate()">
+        <button type="button" class="btn btn-default" ng-click="showcalendar($event)">
+            <i class="glyphicon glyphicon-calendar"></i>
+        </button>
+        </input>
+
+    </div>
+    <!-- {{var1}}
+    <form class="form-horizontal" novalidate name="form" ng-submit="submit()">
+        <div class="well">
+            In Time:
+            <div id="date" class="input-append" datetimez ng-model="var1" ng-change="newTime()">
+                <input data-format="hh:mm:ss" type="text" id="input1" name="input1" value="{{var1}}"></input>
+                <span class="add-on">
+           <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
+         </span>
+            </div>
+            Out Time:
+            <div id="date" class="input-append" datetimez ng-model="var1" ng-change="newTime()">
+                <input data-format="hh:mm:ss" type="text" id="input1" name="input1" value="{{var1}}"></input>
+                <span class="add-on">
+           <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
+         </span>
+            </div>
+        </div>
+    </form> -->
+
+</div>
+<!-- <div class="container" ng-controller="profileCtrl">
+    <div class="batman">
+        Date:
+        <input type="text" uib-datepicker-popup="{{dateformat}}" ng-model="dt" is-open="showdp">
+        <button type="button" class="btn btn-default" ng-click="showcalendar($event)">
+            <i class="glyphicon glyphicon-calendar"></i>
+        </button>
+        </input>
+        <button type="button" class="btn btn-default" id="closeBtn" ng-click="close()">Close</button>
+    </div>
+</div> -->
+
+<!-- <script>
+  var sudoApp = angular.module('sudoApp');
+
+    sudoApp.controller('MainCtrl', function($scope) {
+        $scope.var1 = '12-07-2013';
+    });
+
+
+    sudoApp.directive('datetimez', function() {
+        return {
+            restrict: 'A',
+            require: 'ngModel',
+            link: function(scope, element, attrs, ngModelCtrl) {
+                element.datetimepicker({
+                    language: 'en',
+                    pickDate: false,
+                }).on('changeDate', function(e) {
+                    ngModelCtrl.$setViewValue(e.date);
+                    scope.$apply();
+                });
+            }
+        };
+    });
+</script> -->

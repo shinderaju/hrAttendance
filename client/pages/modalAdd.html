@@ -1,0 +1,55 @@
+<!-- Modal -->
+<div class="container" ng-controller="profileCtrl">
+    <form class="form-horizontal" novalidate name="form" ng-controller="profileCtrl">
+        <div style="Padding:20px;">
+            <div>
+                Date:
+                <!-- <span class="add-on" > -->
+                <input id="inputDate" type="text" uib-datepicker-popup="{{dateformat}}" ng-model="dt" is-open="showdp" ng-change="newDate()"> </input>
+
+                <button id="calenderBtn" type="button" class="btn btn-default" ng-click="showcalendar($event)">
+                    <i class="glyphicon glyphicon-calendar"></i>
+                    <!-- </span> -->
+                </button>
+
+            </div>
+        </div>
+
+
+        <div>
+            In Time:
+            <div id="date" class="input-append" datetimez ng-model="var1" ng-change="newTime()">
+                <input data-format="hh:mm:ss" type="text" id="input1" name="input1" value="{{var1}}"></input>
+                <span class="add-on" id="input1">
+           <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
+         </span>
+            </div>
+            Out Time:
+            <div id="date1" class="input-append" datetimez ng-model="var2" ng-change="newTime()">
+                <input data-format="hh:mm:ss" type="text" id="input1" name="input1" value="{{var2}}"></input>
+                <span class="add-on" id="input1">
+           <i  data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
+         </span>
+            </div>
+        </div>
+        <br>
+
+        <div>
+            Working :
+            <select ng-model="selectedDay" ng-options="x for x in WorkingDay">
+            </select>
+            No. of Hours: {{humanReadable.hours}} hr {{humanReadable.minutes}} min
+            <br>
+            <br>
+            <div>
+                <input type="checkbox" onclick="var input = document.getElementById('name2');
+ if(this.checked){ input.disabled = false; input.focus();}else{input.disabled=true;}" />Reason for absence
+                <input id="name2" name="name2" disabled="disabled" ng-model="reasonForAbsence" /> {{reasonForAbsence}}
+            </div>
+        </div>
+        <div class="closeBtn" style="align:center">
+           <button type="button" class="btn btn-default" ng-click="submit()">submit</button>
+            <button type="button" class="btn btn-default" ng-click="close()">Close</button>
+        </div>
+    </form>
+</div>
