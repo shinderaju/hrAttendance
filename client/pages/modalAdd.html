@@ -6,16 +6,12 @@
                 Date:
                 <!-- <span class="add-on" > -->
                 <input id="inputDate" type="text" uib-datepicker-popup="{{dateformat}}" ng-model="dt" is-open="showdp" ng-change="newDate()"> </input>
-
                 <button id="calenderBtn" type="button" class="btn btn-default" ng-click="showcalendar($event)">
                     <i class="glyphicon glyphicon-calendar"></i>
                     <!-- </span> -->
                 </button>
-
             </div>
         </div>
-
-
         <div>
             In Time:
             <div id="date" class="input-append" datetimez ng-model="var1" ng-change="newTime()">
@@ -33,7 +29,6 @@
             </div>
         </div>
         <br>
-
         <div>
             Working :
             <select ng-model="selectedDay" ng-options="x for x in WorkingDay">

@@ -2,24 +2,22 @@
     <div class="container-fluid">
         <ul class="nav navbar-nav navbar-right">
             <li>
+                <a class="fa fa-user"> {{user}}</a>
+            </li>
+            <li>
                 <a href="#" class="btn btn-info btn-sm">
                     <span class="glyphicon glyphicon-off"></span>
                 </a>
             </li>
-
         </ul>
     </div>
 </nav>
-
-
-
 <div class="container">
     <div>
         <h2>Basic Modal Example</h2>
         <!-- Trigger the modal with a button -->
         <button type="button" class="btn btn-info btn-sm" ng-click="open(1)">Add</button>
         <button type="button" class="btn btn-info btn-sm" ng-click="open(2)">Edit</button>
-
     </div>
     <br>
     <div class="container">
@@ -35,31 +33,14 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>john@example.com</td>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>john@example.com</td>
+                <tr ng-repeat="attendane in attendance track by $index">
+                    <td>{{attendane.date}}</td>
+                    <td>{{attendane.WorkingDay}}</td>
+                    <td>{{attendane.intime}}</td>
+                    <td>{{attendane.outtime}}</td>
+                    <td>{{attendane.no_of_hours}}</td>
+                    <td>{{attendane.reasonForAbsence}}</td>
                 </tr>
-                <tr>
-                    <td>Mary</td>
-                    <td>Moe</td>
-                    <td>mary@example.com</td>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>john@example.com</td>
-                </tr>
-                <tr>
-                    <td>July</td>
-                    <td>Dooley</td>
-                    <td>july@example.com</td>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>john@example.com</td>
-                </tr>
-
             </tbody>
         </table>
     </div>

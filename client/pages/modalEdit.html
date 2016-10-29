@@ -1,14 +1,19 @@
 <div class="container" ng-controller="profileCtrl">
+    <form class="form-horizontal" novalidate name="form" ng-controller="profileCtrl">
+        <div style="Padding:20px;">
+            <div>
+                Date:
+                <!-- <span class="add-on" > -->
+                <input id="inputDate" type="text" uib-datepicker-popup="{{dateformat}}" ng-model="dt" is-open="showdp" ng-change="newDate()"> </input>
+                <button id="calenderBtn" type="button" class="btn btn-default" ng-click="showcalendar($event)">
+                    <i class="glyphicon glyphicon-calendar"></i>
+                    <!-- </span> -->
+                </button>
 
-    <div style="Padding:20px;">
-        Date:
-        <input type="text" uib-datepicker-popup="{{dateformat}}" ng-model="dt" is-open="showdp" ng-change="newDate()">
-        <button type="button" class="btn btn-default" ng-click="showcalendar($event)">
-            <i class="glyphicon glyphicon-calendar"></i>
-        </button>
-        </input>
+            </div>
+          <button type="button" class="btn btn-info btn-sm" ng-click="open(1)">Edit</button>
+        </div>
 
-    </div>
     <!-- {{var1}}
     <form class="form-horizontal" novalidate name="form" ng-submit="submit()">
         <div class="well">
